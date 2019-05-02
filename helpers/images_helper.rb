@@ -1,5 +1,5 @@
 module ImagesHelper
-  def svg_tag(file_name, attributes = {})
+  def inline_svg(file_name, attributes = {})
     root       = Middleman::Application.root
     file_path  = File.join(root, config.source, config.images_dir, file_name)
     svg        = File.exist?(file_path) ? File.read(file_path) : 'SVG not found'
