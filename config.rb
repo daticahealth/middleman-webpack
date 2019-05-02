@@ -8,36 +8,36 @@ include FaviconsHelper
 # Load Sass from node_modules
 config[:sass_assets_paths] << File.join(root, 'node_modules')
 
-set :css_dir,    'assets/scss'
+set :css_dir,    'assets/css'
 set :fonts_dir,  'assets/fonts'
 set :images_dir, 'assets/images'
 set :js_dir,     'assets/js'
 
 # Set favicons
-set :favicons, [
-  {
-    rel: 'apple-touch-icon',
-    size: '180x180',
-    icon: 'apple-touch-icon.png'
-  },
-  {
-    rel: 'icon',
-    type: 'image/png',
-    size: '32x32',
-    icon: 'favicon32x32.png'
-  },
-  {
-    rel: 'icon',
-    type: 'image/png',
-    size: '16x16',
-    icon: 'favicon16x16.png'
-  },
-  {
-    rel: 'shortcut icon',
-    size: '64x64,32x32,24x24,16x16',
-    icon: 'favicon.ico'
-  }
-]
+# set :favicons, [
+#   {
+#     rel: 'apple-touch-icon',
+#     size: '180x180',
+#     icon: 'apple-touch-icon.png'
+#   },
+#   {
+#     rel: 'icon',
+#     type: 'image/png',
+#     size: '32x32',
+#     icon: 'favicon32x32.png'
+#   },
+#   {
+#     rel: 'icon',
+#     type: 'image/png',
+#     size: '16x16',
+#     icon: 'favicon16x16.png'
+#   },
+#   {
+#     rel: 'shortcut icon',
+#     size: '64x64,32x32,24x24,16x16',
+#     icon: 'favicon.ico'
+#   }
+# ]
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -99,9 +99,9 @@ configure :build do
   ignore   File.join(config[:js_dir], '*') # handled by webpack
   set      :asset_host, @app.data.site.host
   set      :relative_links, true
-  activate :asset_hash
+  # activate :asset_hash
   #activate :favicon_maker, icons: generate_favicons_hash
-  activate :gzip
+  # activate :gzip
   activate :minify_css
   activate :minify_html
   activate :minify_javascript
@@ -110,8 +110,8 @@ configure :build do
                     sitemap: File.join(@app.data.site.host, 'sitemap.xml')
 end
 
-activate :deploy do |deploy|
-  deploy.deploy_method = :git
-  deploy.branch        = 'gh-pages'
-  deploy.build_before  = true
-end
+# activate :deploy do |deploy|
+#   deploy.deploy_method = :git
+#   deploy.branch        = 'gh-pages'
+#   deploy.build_before  = true
+# end
