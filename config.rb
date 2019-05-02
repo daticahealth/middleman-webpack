@@ -8,10 +8,10 @@ include FaviconsHelper
 # Load Sass from node_modules
 config[:sass_assets_paths] << File.join(root, 'node_modules')
 
-set :css_dir,    'assets/stylesheets'
+set :css_dir,    'assets/scss'
 set :fonts_dir,  'assets/fonts'
 set :images_dir, 'assets/images'
-set :js_dir,     'assets/javascripts'
+set :js_dir,     'assets/js'
 
 # Set favicons
 set :favicons, [
@@ -100,7 +100,7 @@ configure :build do
   set      :asset_host, @app.data.site.host
   set      :relative_links, true
   activate :asset_hash
-  activate :favicon_maker, icons: generate_favicons_hash
+  #activate :favicon_maker, icons: generate_favicons_hash
   activate :gzip
   activate :minify_css
   activate :minify_html
