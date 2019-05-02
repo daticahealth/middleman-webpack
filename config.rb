@@ -49,7 +49,7 @@ end
 activate :external_pipeline,
          name: :webpack,
          command: build? ? 'yarn run build' : 'yarn run start',
-         source: 'dist',
+         source: 'build',
          latency: 1
 
 activate :dotenv
