@@ -13,32 +13,6 @@ set :fonts_dir,  'assets/fonts'
 set :images_dir, 'assets/images'
 set :js_dir,     'assets/js'
 
-# Set favicons
-# set :favicons, [
-#   {
-#     rel: 'apple-touch-icon',
-#     size: '180x180',
-#     icon: 'apple-touch-icon.png'
-#   },
-#   {
-#     rel: 'icon',
-#     type: 'image/png',
-#     size: '32x32',
-#     icon: 'favicon32x32.png'
-#   },
-#   {
-#     rel: 'icon',
-#     type: 'image/png',
-#     size: '16x16',
-#     icon: 'favicon16x16.png'
-#   },
-#   {
-#     rel: 'shortcut icon',
-#     size: '64x64,32x32,24x24,16x16',
-#     icon: 'favicon.ico'
-#   }
-# ]
-
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
