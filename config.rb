@@ -1,6 +1,7 @@
 # General config
 # http://localhost:4567/__middleman
 
+require 'builder' # Required for sitemap
 # Import custom libraries and helpers
 Dir['./*/*.rb'].each { |file| load file }
 include FaviconsHelper
@@ -35,6 +36,7 @@ activate :meta_tags
 page '/*.xml',  layout: false
 page '/*.json', layout: false
 page '/*.txt',  layout: false
+page '/google8c054d702c2044e4.html', :layout => false
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
@@ -73,6 +75,10 @@ configure :build do
   ignore   File.join(config[:js_dir], '*') # handled by webpack
   set      :asset_host, @app.data.site.host
   set      :relative_links, true
+  # Sitemap
+  set :url_root, @app.data.site.host
+  activate :search_engine_sitemap, default_priority: 0.5, default_change_frequency: "weekly"
+
   # activate :asset_hash
   #activate :favicon_maker, icons: generate_favicons_hash
   # activate :gzip
