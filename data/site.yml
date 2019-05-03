@@ -1,0 +1,21 @@
+name:         "Datica Health"
+description:  "🏗 Scalable ready-to-use Middleman 4 template"
+host:         "https://www.datica.com/"
+keywords:     "healthcare, cloud, compliance, integration"
+thumbnail:    "banner.jpg"
+favicon:      "_favicon.svg"
+base_color:   "#1055ff"
+repository:   "https://github.com/daticahealth/"
+license:      "https://gabriele.canepa.io/mit-license"
+geocoding:
+  place:      "Lisbon, Portugal"
+  latitude:   "38.7437396"
+  longitude:  "9.2302437"
+  region:     "PT-17"
+author:
+  name:       "Datica Team"
+  email:      "hello@datica.com"
+  phone:      ""
+  website:    "https://datica.com"
+  # Available social media tags: bitbucket dribbble facebook github gitlab instagram linkedin medium twitter
+  github:     "daticahealth"
