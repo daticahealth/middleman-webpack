@@ -9,7 +9,8 @@
 //    ├── 2. components/
 //    ├── 3. layouts/
 //    └── 4. pages/
-
+@import "~foundation-sites/scss/foundation";
+@include foundation-everything;
 @import "settings/colors";
 @import "settings/fonts";
 @import "base/site";

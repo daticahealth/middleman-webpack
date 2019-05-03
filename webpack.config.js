@@ -1,6 +1,10 @@
 const path = require('path');
 
 module.exports = {
+    externals: {
+        jQuery: 'jQuery'
+            // foundation: 'Foundation'
+    },
     entry: {
         main: './source/assets/js/index.js'
     },
@@ -24,4 +28,9 @@ module.exports = {
             }
         ]
     }
+    // resolve: {
+    //     // modulesDirectories: ['./node_modules']
+    //     root: [path.resolve(__dirname, 'source'), 'node_modules'],
+    //     extensions: ['', '.js']
+    // }
 };
